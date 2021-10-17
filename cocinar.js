@@ -3,33 +3,38 @@ const foodsToCook = ["Escabeche de pollo","Pollo al sillao",
 "Puré de papas","Arroz con pollo","Seco de carne","Arroz a la jardinera",
 "Cau-cau","Arroz con lentejas","Tallarín verde","Tallarín rojo","Macarrones",
 "Olluco con carne","Picante de carne","Arroz chaufa",
-"Bistek con papa sancochada","Pollo a la olla","Trigo con pollo",
-"Pollo broaster","Pollo al horno","Causa","Chanfainita","Arroz con huevo",
+"Bistek con papa sancochada","Pollo a la olla","Pollo broaster",
+"Pollo al horno","Causa","Chanfainita","Arroz con huevo",
 "Papa a la huancaína","Ensalada rusa con milanesa","Arroz con atún",
 "Arroz con huevo"];
 
+function randNumber(){
+	number = Math.floor(Math.random()*29);
+	return number;
+}
+
 document.getElementById("botoncito").addEventListener("click",function(){
 
-	let n1 = Math.floor(Math.random()*30);
+	let n1 = randNumber();
 
-	let n2 = Math.floor(Math.random()*30);
+	let n2 = randNumber();
 	while (n2==n1){
-		n2 = Math.floor(Math.random()*30);
+		n2 = randNumber();
 	}
 
-	let n3 = Math.floor(Math.random()*30);
+	let n3 = randNumber();
 	while (n3==n1 || n3==n2){
-		n3 = Math.floor(Math.random()*30);
+		n3 = randNumber();
 	}
 
-	let n4 = Math.floor(Math.random()*30);
+	let n4 = randNumber();
 	while (n4==n1 || n4==n2 || n4==n3){
-		n4 = Math.floor(Math.random()*30);
+		n4 = randNumber();
 	}
 
-	let n5 = Math.floor(Math.random()*30);
+	let n5 = randNumber();
 	while (n5==n1 || n5==n2 || n5==n3 || n5==n4){
-		n5 = Math.floor(Math.random()*30);
+		n5 = randNumber();
 	}
 	
 	let food1 = foodsToCook[n1];
