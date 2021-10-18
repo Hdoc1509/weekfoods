@@ -9,7 +9,7 @@ const foodsToCook = ["Escabeche de pollo","Pollo al sillao",
 "Arroz con huevo"];
 
 function randNumber(){
-	number = Math.floor(Math.random()*29);
+	number = Math.floor(Math.random()*28);
 	return number;
 }
 
