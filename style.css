@@ -111,6 +111,7 @@ td#food5{
 	text-align: center;
 	font-size: 18px;
 	border: none;
+	outline: none;
 }
 
 #botoncito:hover{
