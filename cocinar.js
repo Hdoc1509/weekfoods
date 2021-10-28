@@ -1,41 +1,54 @@
-const foodsToCook = ["Escabeche de pollo","Pollo al sillao",
-"Estofado de pollo","Ají de pollo","Lomo saltado","Carapulcra",
-"Puré de papas","Arroz con pollo","Seco de carne","Arroz a la jardinera",
-"Cau-cau","Arroz con lentejas","Tallarín verde","Tallarín rojo","Macarrones",
-"Olluco con carne","Picante de carne","Arroz chaufa",
-"Bistek con papa sancochada","Pollo a la olla","Pollo broaster",
-"Pollo al horno","Causa","Chanfainita","Arroz con huevo",
-"Papa a la huancaína","Ensalada rusa con milanesa","Arroz con atún",
-"Arroz con huevo"];
+const foodsToCook = [
+"Escabeche de pollo",
+"Pollo al sillao",
+"Estofado de pollo",
+"Ají de pollo",
+"Lomo saltado",
+"Carapulcra",
+"Puré de papas",
+"Arroz con pollo",
+"Seco de carne",
+"Arroz a la jardinera",
+"Cau-cau",
+"Arroz con lentejas",
+"Tallarín verde",
+"Tallarín rojo",
+"Macarrones",
+"Olluco con carne",
+"Picante de carne",
+"Arroz chaufa",
+"Bistek con papa sancochada",
+"Pollo a la olla",
+"Pollo broaster",
+"Pollo al horno",
+"Causa",
+"Chanfainita",
+"Arroz con huevo",
+"Papa a la huancaína",
+"Ensalada rusa con milanesa",
+"Arroz con atún"
+];
+
+const generatedNumbers = [];
 
 function randNumber(){
-	number = Math.floor(Math.random()*28);
+	number = Math.floor(Math.random()*foodsToCook.length);
+
+	while(generatedNumbers.includes(number)){
+		number = Math.floor(Math.random()*foodsToCook.length);
+	}
+	generatedNumbers.push(number);
+
 	return number;
 }
 
 document.getElementById("botoncito").addEventListener("click",function(){
 
 	let n1 = randNumber();
-
 	let n2 = randNumber();
-	while (n2==n1){
-		n2 = randNumber();
-	}
-
 	let n3 = randNumber();
-	while (n3==n1 || n3==n2){
-		n3 = randNumber();
-	}
-
 	let n4 = randNumber();
-	while (n4==n1 || n4==n2 || n4==n3){
-		n4 = randNumber();
-	}
-
 	let n5 = randNumber();
-	while (n5==n1 || n5==n2 || n5==n3 || n5==n4){
-		n5 = randNumber();
-	}
 	
 	let food1 = foodsToCook[n1];
 	let food2 = foodsToCook[n2];
@@ -49,4 +62,5 @@ document.getElementById("botoncito").addEventListener("click",function(){
 	document.getElementById("food4").innerText = food4;
 	document.getElementById("food5").innerText = food5;
 
+	generatedNumbers.splice(0,5);
 });
