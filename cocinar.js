@@ -26,7 +26,8 @@ const foodsToCook = [
 "Arroz con huevo",
 "Papa a la huancaína",
 "Ensalada rusa con milanesa",
-"Arroz con atún"
+"Arroz con atún",
+"Alverjita verde"
 ];
 
 const generatedNumbers = [];
