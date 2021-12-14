@@ -1,67 +1,65 @@
+// Array of foods to cook
 const foodsToCook = [
-"Escabeche de pollo",
-"Pollo al sillao",
-"Estofado de pollo",
-"Ají de pollo",
-"Lomo saltado",
-"Carapulcra",
-"Puré de papas",
-"Arroz con pollo",
-"Seco de carne",
-"Arroz a la jardinera",
-"Cau-cau",
-"Arroz con lentejas",
-"Tallarín verde",
-"Tallarín rojo",
-"Macarrones",
-"Olluco con carne",
-"Picante de carne",
-"Arroz chaufa",
-"Bistek con papa sancochada",
-"Pollo a la olla",
-"Pollo broaster",
-"Pollo al horno",
-"Causa",
-"Chanfainita",
-"Arroz con huevo",
-"Papa a la huancaína",
-"Ensalada rusa con milanesa",
-"Arroz con atún",
-"Alverjita verde"
+	"Escabeche de pollo",
+	"Pollo al sillao",
+	"Estofado de pollo",
+	"Ají de pollo",
+	"Lomo saltado",
+	"Carapulcra",
+	"Puré de papas",
+	"Arroz con pollo",
+	"Seco de carne",
+	"Arroz a la jardinera",
+	"Cau-cau",
+	"Arroz con lentejas",
+	"Tallarín verde",
+	"Tallarín rojo",
+	"Macarrones",
+	"Olluco con carne",
+	"Picante de carne",
+	"Arroz chaufa",
+	"Bistek con papa sancochada",
+	"Pollo a la olla",
+	"Pollo broaster",
+	"Pollo al horno",
+	"Causa",
+	"Chanfainita",
+	"Arroz con huevo",
+	"Papa a la huancaína",
+	"Ensalada rusa con milanesa",
+	"Arroz con atún",
+	"Alverjita verde"
 ];
 
-const generatedNumbers = [];
+// Array that will contain the generated foods
+const generatedFoods = [];
 
-function randNumber(){
-	number = Math.floor(Math.random()*foodsToCook.length);
+function arrayRandElement(array){
+	let index = Math.floor(Math.random() * array.length);
+	return array[index];
+}
 
-	while(generatedNumbers.includes(number)){
-		number = Math.floor(Math.random()*foodsToCook.length);
+function generateUniqueFood(){
+	let food = arrayRandElement(foodsToCook);
+
+	while (generatedFoods.includes(food)) {
+		food = arrayRandElement(foodsToCook);
 	}
-	generatedNumbers.push(number);
 
-	return number;
+	generatedFoods.push(food);
 }
 
 document.getElementById("botoncito").addEventListener("click",function(){
+	// Generating foods
+	for (let i = 0; i < 5; i++) {
+		generateUniqueFood();
+	}
 
-	let n1 = randNumber();
-	let n2 = randNumber();
-	let n3 = randNumber();
-	let n4 = randNumber();
-	let n5 = randNumber();
-	
-	let food1 = foodsToCook[n1];
-	let food2 = foodsToCook[n2];
-	let food3 = foodsToCook[n3];
-	let food4 = foodsToCook[n4];
-	let food5 = foodsToCook[n5];
+	// Adding the generated food to the corresponding cell
+	for (let i = 0; i < 5; i++) {
+		document.getElementById(`food${i+1}`).innerText = generatedFoods[i];
+	}
 
-	document.getElementById("food1").innerText = food1;
-	document.getElementById("food2").innerText = food2;
-	document.getElementById("food3").innerText = food3;
-	document.getElementById("food4").innerText = food4;
-	document.getElementById("food5").innerText = food5;
-
-	generatedNumbers.splice(0,5);
+	// Cleaning array generatedFoods
+	generatedFoods.splice(0,5);
 });
