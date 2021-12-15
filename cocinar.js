@@ -50,16 +50,12 @@ function generateUniqueFood(){
 }
 
 document.getElementById("botoncito").addEventListener("click",function(){
-	// Generating foods
+	// Generating and adding the food to the corresponding cell
 	for (let i = 0; i < 5; i++) {
 		generateUniqueFood();
-	}
-
-	// Adding the generated food to the corresponding cell
-	for (let i = 0; i < 5; i++) {
-		document.getElementById(`food${i+1}`).innerText = generatedFoods[i];
+		document.getElementById(`food${i + 1}`).innerText = generatedFoods[i];
 	}
 
 	// Cleaning array generatedFoods
-	generatedFoods.splice(0,5);
+	generatedFoods.splice(0,generatedFoods.length);
 });
