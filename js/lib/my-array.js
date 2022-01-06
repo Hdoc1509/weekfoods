@@ -5,8 +5,7 @@
  */
 function arrayRandElement(array) {
 	let index = Math.floor(Math.random() * array.length);
-	let randElement = array[index]
-	return randElement;
+	return array[index];
 }
 
 /**
