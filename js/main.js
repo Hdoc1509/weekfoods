@@ -4,7 +4,7 @@ import { improveArray } from "./modules/my-array.js";
  * Array of foods
  * @type {Array<String>}
  */
-const foodsToCook = [
+const foods = [
   "Seco de carne",
   "Cau-cau",
   "Estofado",
@@ -24,7 +24,7 @@ const foodsToCook = [
   "Milanesa",
 ];
 
-improveArray(foodsToCook);
+improveArray(foods);
 
 /**
  * Array for generated foods
@@ -38,10 +38,10 @@ improveArray(generatedFoods);
  * Generate an unique food
  */
 function generateUniqueFood() {
-  let food = foodsToCook.randElement();
+  let food = foods.randElement();
 
   while (generatedFoods.includes(food)) {
-    food = foodsToCook.randElement();
+    food = foods.randElement();
   }
 
   generatedFoods.push(food);
