@@ -29,12 +29,12 @@ th {
   font-size: 20px;
 }
 
-th#dayHead {
-  border-top-left-radius: 9px;
+th:first-child {
+  border-top-left-radius: 6px;
 }
 
-th#foodHead {
-  border-top-right-radius: 9px;
+th:last-child {
+  border-top-right-radius: 6px;
 }
 
 th,
@@ -42,15 +42,15 @@ td {
   padding: 5px;
 }
 
-tbody tr:nth-child(odd) {
+tbody tr:nth-child(odd) td {
   background-color: #bbb;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even) td {
   background-color: #ddd;
 }
 
-tbody tr:hover {
+tbody tr:hover td {
   background-color: #fff;
 }
 
@@ -62,12 +62,11 @@ td.food {
   width: 270px;
 }
 
-td#dayFoot {
-  border-bottom-left-radius: 9px;
+tbody tr:last-child :first-child {
+  border-bottom-left-radius: 6px;
 }
-
-td#food5 {
-  border-bottom-right-radius: 9px;
+tbody tr:last-child :last-child {
+  border-bottom-right-radius: 6px;
 }
 
 #botoncito {
@@ -76,7 +75,6 @@ td#food5 {
   background-color: #eee;
   border-radius: 10px;
   padding: 8px;
-  text-align: center;
   font-size: 18px;
   border: none;
   outline: none;
