@@ -1,5 +1,3 @@
-//@ts-check
-
 import { improveArray } from "./modules/my-array.js";
 
 /**
