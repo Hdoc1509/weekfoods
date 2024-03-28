@@ -2,272 +2,369 @@
 =            GLOBAL            =
 ==============================*/
 
-*{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-	font-family: sans-serif;
-	box-sizing: border-box;
-	transition: all 0.3s ease;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-.container{
-	position: relative;
-	margin: auto;
-	width: 100%;
-	height: auto;
+.container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: auto;
 }
 
-.row{
-	position: relative;
-	margin: auto;
-	width: 100%;
-	height: auto;
-	clear: both;
-	display: table;
+.row {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  clear: both;
+  display: table;
 }
 
-[class*="col-"]{
-	float: left;
-	padding: 10px;
+[class*="col-"] {
+  float: left;
+  padding: 10px;
 }
 
 /*==============================
 =            HEADER            =
 ==============================*/
 
-#mainTitle{
-	text-align: center;
+#mainTitle {
+  text-align: center;
 }
 
 /*===============================
 =            ARTICLE            =
 ===============================*/
 
-table{
-	background-color: #888;
-	padding: 1px;
-	margin: 0 auto;
-	border-radius: 10px;
+table {
+  background-color: #888;
+  padding: 1px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-th{
-	background-color: #999;
-	color: #fff;
-	font-size: 20px;
+th {
+  background-color: #999;
+  color: #fff;
+  font-size: 20px;
 }
 
-th#dayHead{
-	border-top-left-radius: 9px;
+th#dayHead {
+  border-top-left-radius: 9px;
 }
 
-th#foodHead{
-	border-top-right-radius: 9px;
+th#foodHead {
+  border-top-right-radius: 9px;
 }
 
-th, td{
-	padding: 5px;
+th,
+td {
+  padding: 5px;
 }
 
-tbody tr:nth-child(odd){
-	background-color: #bbb;
+tbody tr:nth-child(odd) {
+  background-color: #bbb;
 }
 
-tbody tr:nth-child(even){
-	background-color: #ddd;
+tbody tr:nth-child(even) {
+  background-color: #ddd;
 }
 
-tbody tr:hover{
-	background-color: #fff;
+tbody tr:hover {
+  background-color: #fff;
 }
 
-td{
-	font-size: 18px;
+td {
+  font-size: 18px;
 }
 
-td.food{
-	width: 270px;
+td.food {
+  width: 270px;
 }
 
-td#dayFoot{
-	border-bottom-left-radius: 9px;
+td#dayFoot {
+  border-bottom-left-radius: 9px;
 }
 
-td#food5{
-	border-bottom-right-radius: 9px;
+td#food5 {
+  border-bottom-right-radius: 9px;
 }
 
-#buttonContainer{
-	display: flex;
-	justify-content: center;
+#buttonContainer {
+  display: flex;
+  justify-content: center;
 }
 
-#botoncito{
-	margin: 0 auto;
-	background-color: #eee;
-	border-radius: 10px;
-	padding: 8px;
-	text-align: center;
-	font-size: 18px;
-	border: none;
-	outline: none;
+#botoncito {
+  margin: 0 auto;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  outline: none;
 }
 
-#botoncito:hover{
-	background-color: #ccc;
+#botoncito:hover {
+  background-color: #ccc;
 }
 
-#botoncito:active{
-	background-color: #888;
-	color: #fff;
-	transition: all 0s;
+#botoncito:active {
+  background-color: #888;
+  color: #fff;
+  transition: all 0s;
 }
 
 /*==============================
 =            FOOTER            =
 ==============================*/
 
-#copy{
-	text-align: center;
+#copy {
+  text-align: center;
 }
 
 /*==================================================================
 =            PANTALLA DE ESCRITORIO GRANDE - LARGE (lg)            =
 ==================================================================*/
 
-@media(min-width: 1200px){
+@media (min-width: 1200px) {
+  .col-lg-12 {
+    width: 100%;
+  }
 
-	.col-lg-12{width: 100%}
+  .col-lg-11 {
+    width: 91.66666667%;
+  }
 
-	.col-lg-11{width: 91.66666667%}
+  .col-lg-10 {
+    width: 83.33333333%;
+  }
 
-	.col-lg-10{width: 83.33333333%}
+  .col-lg-9 {
+    width: 75%;
+  }
 
-	.col-lg-9{width: 75%}
+  .col-lg-8 {
+    width: 66.66666667%;
+  }
 
-	.col-lg-8{width: 66.66666667%}
+  .col-lg-7 {
+    width: 58.33333333%;
+  }
 
-	.col-lg-7{width: 58.33333333%}
+  .col-lg-6 {
+    width: 50%;
+  }
 
-	.col-lg-6{width: 50%}
+  .col-lg-5 {
+    width: 41.66666667%;
+  }
 
-	.col-lg-5{width: 41.66666667%}
+  .col-lg-4 {
+    width: 33.33333333%;
+  }
 
-	.col-lg-4{width: 33.33333333%}
+  .col-lg-3 {
+    width: 25%;
+  }
 
-	.col-lg-3{width: 25%}
+  .col-lg-2 {
+    width: 16.66666667%;
+  }
 
-	.col-lg-2{width: 16.66666667%}
+  .col-lg-1 {
+    width: 8.33333333%;
+  }
 
-	.col-lg-1{width: 8.33333333%}
-
-	.col-lg-0{display: none;}
-
+  .col-lg-0 {
+    display: none;
+  }
 }
 
 /*========================================================
 =            PANTALLA DE LAPTOP - MEDIUM (md)            =
 ========================================================*/
 
-@media(max-width: 1199px) and (min-width: 992px){
+@media (max-width: 1199px) and (min-width: 992px) {
+  .col-md-12 {
+    width: 100%;
+  }
 
-	.col-md-12{width: 100%}
+  .col-md-11 {
+    width: 91.66666667%;
+  }
 
-	.col-md-11{width: 91.66666667%}
+  .col-md-10 {
+    width: 83.33333333%;
+  }
 
-	.col-md-10{width: 83.33333333%}
+  .col-md-9 {
+    width: 75%;
+  }
 
-	.col-md-9{width: 75%}
+  .col-md-8 {
+    width: 66.66666667%;
+  }
 
-	.col-md-8{width: 66.66666667%}
+  .col-md-7 {
+    width: 58.33333333%;
+  }
 
-	.col-md-7{width: 58.33333333%}
+  .col-md-6 {
+    width: 50%;
+  }
 
-	.col-md-6{width: 50%}
+  .col-md-5 {
+    width: 41.66666667%;
+  }
 
-	.col-md-5{width: 41.66666667%}
+  .col-md-4 {
+    width: 33.33333333%;
+  }
 
-	.col-md-4{width: 33.33333333%}
+  .col-md-3 {
+    width: 25%;
+  }
 
-	.col-md-3{width: 25%}
+  .col-md-2 {
+    width: 16.66666667%;
+  }
 
-	.col-md-2{width: 16.66666667%}
+  .col-md-1 {
+    width: 8.33333333%;
+  }
 
-	.col-md-1{width: 8.33333333%}
-
-	.col-md-0{display: none;}
-
+  .col-md-0 {
+    display: none;
+  }
 }
 
 /*=======================================================
 =            PANTALLA DE TABLET - SMALL (sm)            =
 =======================================================*/
 
-@media(max-width: 991px) and (min-width: 768px){
+@media (max-width: 991px) and (min-width: 768px) {
+  .col-sm-12 {
+    width: 100%;
+  }
 
-	.col-sm-12{width: 100%}
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
 
-	.col-sm-11{width: 91.66666667%}
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
 
-	.col-sm-10{width: 83.33333333%}
+  .col-sm-9 {
+    width: 75%;
+  }
 
-	.col-sm-9{width: 75%}
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
 
-	.col-sm-8{width: 66.66666667%}
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
 
-	.col-sm-7{width: 58.33333333%}
+  .col-sm-6 {
+    width: 50%;
+  }
 
-	.col-sm-6{width: 50%}
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
 
-	.col-sm-5{width: 41.66666667%}
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
 
-	.col-sm-4{width: 33.33333333%}
+  .col-sm-3 {
+    width: 25%;
+  }
 
-	.col-sm-3{width: 25%}
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
 
-	.col-sm-2{width: 16.66666667%}
+  .col-sm-1 {
+    width: 8.33333333%;
+  }
 
-	.col-sm-1{width: 8.33333333%}
-
-	.col-sm-0{display: none;}
-
+  .col-sm-0 {
+    display: none;
+  }
 }
 
 /*==================================================================
 =            PANTALLA DE SMARTPHONES - EXTRA SMALL (xs)            =
 ==================================================================*/
 
-@media(max-width: 767px){
+@media (max-width: 767px) {
+  .col-xs-12 {
+    width: 100%;
+  }
 
-	.col-xs-12{width: 100%}
+  .col-xs-11 {
+    width: 91.66666667%;
+  }
 
-	.col-xs-11{width: 91.66666667%}
+  .col-xs-10 {
+    width: 83.33333333%;
+  }
 
-	.col-xs-10{width: 83.33333333%}
+  .col-xs-9 {
+    width: 75%;
+  }
 
-	.col-xs-9{width: 75%}
+  .col-xs-8 {
+    width: 66.66666667%;
+  }
 
-	.col-xs-8{width: 66.66666667%}
+  .col-xs-7 {
+    width: 58.33333333%;
+  }
 
-	.col-xs-7{width: 58.33333333%}
+  .col-xs-6 {
+    width: 50%;
+  }
 
-	.col-xs-6{width: 50%}
+  .col-xs-5 {
+    width: 41.66666667%;
+  }
 
-	.col-xs-5{width: 41.66666667%}
+  .col-xs-4 {
+    width: 33.33333333%;
+  }
 
-	.col-xs-4{width: 33.33333333%}
+  .col-xs-3 {
+    width: 25%;
+  }
 
-	.col-xs-3{width: 25%}
+  .col-xs-2 {
+    width: 16.66666667%;
+  }
 
-	.col-xs-2{width: 16.66666667%}
+  .col-xs-1 {
+    width: 8.33333333%;
+  }
 
-	.col-xs-1{width: 8.33333333%}
+  .col-xs-0 {
+    display: none;
+  }
 
-	.col-xs-0{display: none;}
-
-	td{
-		font-size: 15px;
-	}
-
+  td {
+    font-size: 15px;
+  }
 }

@@ -1,92 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cocinar en la Semana</title>
-	<link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocinar en la Semana</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h1 id="mainTitle">Cocinar en la Semana</h1>
+        </div>
+      </header>
 
-<!--===============================
-=            Container            =
-================================-->
+      <article class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <table>
+            <thead>
+              <tr>
+                <th id="dayHead">Día</th>
+                <th id="foodHead">Plato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lunes</td>
+                <td id="food1" class="food"></td>
+              </tr>
+              <tr>
+                <td>Martes</td>
+                <td id="food2" class="food"></td>
+              </tr>
+              <tr>
+                <td>Miércoles</td>
+                <td id="food3" class="food"></td>
+              </tr>
+              <tr>
+                <td>Jueves</td>
+                <td id="food4" class="food"></td>
+              </tr>
+              <tr>
+                <td id="dayFoot">Viernes</td>
+                <td id="food5" class="food"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<div class="container">
-	
-<!--============================
-=            Header            =
-=============================-->
+        <div
+          id="buttonContainer"
+          class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+        >
+          <button id="botoncito" type="button">Generar</button>
+        </div>
+      </article>
 
-<header class="row">
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<h1 id="mainTitle">Cocinar en la Semana</h1>
-	</div>
-</header>
+      <footer class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <p id="copy">&copy; 2021 | Héctor Ochoa</p>
+        </div>
+      </footer>
+    </div>
 
-<!--====  End of Header  ====-->
-
-<!--=============================
-=            Article            =
-==============================-->
-
-<article class="row">
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<table>
-			<thead>
-				<tr>
-					<th id="dayHead">Día</th>
-					<th id="foodHead">Plato</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Lunes</td>
-					<td id="food1" class="food"></td>
-				</tr>
-				<tr>
-					<td>Martes</td>
-					<td id="food2" class="food"></td>
-				</tr>
-				<tr>
-					<td>Miércoles</td>
-					<td id="food3" class="food"></td>
-				</tr>
-				<tr>
-					<td>Jueves</td>
-					<td id="food4" class="food"></td>
-				</tr>
-				<tr>
-					<td id="dayFoot">Viernes</td>
-					<td id="food5" class="food"></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div id="buttonContainer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<button id="botoncito" type="button">Generar</button>
-	</div>
-</article>
-
-<!--====  End of Article  ====-->
-
-<!--============================
-=            Footer            =
-=============================-->
-
-<footer class="row">
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<p id="copy"> &copy; 2021 | Héctor Ochoa</p>
-	</div>
-</footer>
-
-<!--====  End of Footer  ====-->
-
-</div>
-
-<!--====  End of Container  ====-->
-
-<script src="./js/main.js" type="module"></script>
-</body>
+    <script src="./js/main.js" type="module"></script>
+  </body>
 </html>
