@@ -1,5 +1,3 @@
-import { improveArray } from "./modules/my-array.js";
-
 /**
  * Array of foods
  * @type {Array<String>}
@@ -24,7 +22,9 @@ const foods = [
   "Milanesa",
 ];
 
-improveArray(foods);
+const getRandomFood = () => {
+  return foods[Math.floor(Math.random() * foods.length)];
+};
 
 /**
  * Array for generated foods
@@ -32,16 +32,14 @@ improveArray(foods);
  */
 const generatedFoods = [];
 
-improveArray(generatedFoods);
-
 /**
  * Generate an unique food
  */
 function generateUniqueFood() {
-  let food = foods.randElement();
+  let food = getRandomFood(foods);
 
   while (generatedFoods.includes(food)) {
-    food = foods.randElement();
+    food = getRandomFood(foods);
   }
 
   generatedFoods.push(food);
@@ -54,5 +52,6 @@ document.getElementById("botoncito").addEventListener("click", function () {
     document.getElementById(`food${i + 1}`).innerText = generatedFoods[i];
   }
 
-  generatedFoods.clean();
+  // Clean generated foods
+  generatedFoods.splice(0, generatedFoods.length);
 });
